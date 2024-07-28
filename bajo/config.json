@@ -1,0 +1,4 @@
+{
+  "alias": "dbcdb",
+  "dependencies": ["dobo"]
+}

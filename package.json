@@ -1,0 +1,32 @@
+{
+  "name": "dobo-couchdb",
+  "version": "1.0.0",
+  "description": "CouchDB driver for Dobo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardhi/dobo-couchdb.git"
+  },
+  "keywords": [
+    "couchdb",
+    "dobo",
+    "db",
+    "driver",
+    "bajo",
+    "framework",
+    "modular"
+  ],
+  "author": "Ardhi Lukianto <ardhi@lukianto.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ardhi/dobo-couchdb/issues"
+  },
+  "homepage": "https://github.com/ardhi/dobo-couchdb#readme",
+  "dependencies": {
+    "nano": "^10.1.3"
+  }
+}
