@@ -6,7 +6,7 @@ async function recordFind ({ schema, filter = {}, options = {} } = {}) {
   const { limit, skip, sort, page } = await prepPagination(filter, schema)
 
   const selector = options.query ?? {}
-  const model = instance.client.use(schema.modelName)
+  const model = instance.client.use(schema.name)
   const sorts = []
   forOwn(sort, (v, k) => {
     sorts.push(set({}, k, v < 0 ? 'desc' : 'asc'))

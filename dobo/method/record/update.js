@@ -7,7 +7,7 @@ async function recordUpdate ({ schema, id, body, options } = {}) {
   const { instance } = getInfo(schema)
 
   const old = noResult ? undefined : await getRecord.call(this, { schema, id, options: { thrownNotFound: true } })
-  const model = instance.client.use(schema.modelName)
+  const model = instance.client.use(schema.name)
   await model.insert(merge({ _id: id, _rev: old.data._rev }, omit(old.data, ['_id', '_rev']), body))
   if (noResult) return
   const result = await getRecord.call(this, { schema, id, options: { thrownNotFound: true } })

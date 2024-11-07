@@ -6,7 +6,7 @@ async function recordCreate ({ schema, body, options = {} } = {}) {
   const { noResult } = options
   const bodyId = body.id
   delete body.id
-  const model = instance.client.use(schema.modelName)
+  const model = instance.client.use(schema.name)
   await model.insert(body, bodyId)
   if (noResult) return
   return await getRecord.call(this, { schema, id: bodyId })

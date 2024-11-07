@@ -3,7 +3,7 @@ async function recordGet ({ schema, id, options = {} } = {}) {
   const { instance } = getInfo(schema)
   const { thrownNotFound } = options
 
-  const model = instance.client.use(schema.modelName)
+  const model = instance.client.use(schema.name)
   let result
   try {
     result = await model.get(id)
