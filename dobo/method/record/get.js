@@ -8,7 +8,7 @@ async function recordGet ({ schema, id, options = {} } = {}) {
   try {
     result = await model.get(id)
   } catch (err) {
-    if (thrownNotFound) throw this.error('Record \'%s@%s\' not found!', id, schema.name, { statusCode: 404 })
+    if (thrownNotFound) throw this.error('recordNotFound%s%s', id, schema.name, { statusCode: 404 })
     throw err
   }
   return { data: result, rev: result ? result._rev : null }

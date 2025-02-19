@@ -21,7 +21,7 @@ async function instantiate ({ connection, schemas, noRebuild }) {
     try {
       await collCreate.call(this, schema)
     } catch (err) {
-      this.log.error('Error on \'%s\': %s', connection.name, err.message)
+      this.log.error('errorOn%s%s', connection.name, err.message)
     }
   }
 }
