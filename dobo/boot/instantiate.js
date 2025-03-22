@@ -3,7 +3,7 @@ import collCreate from '../method/coll/create.js'
 import collExists from '../method/coll/exists.js'
 
 async function instantiate ({ connection, schemas, noRebuild }) {
-  const { pick } = this.app.bajo.lib._
+  const { pick } = this.lib._
   this.instances = this.instances ?? []
   const instance = pick(connection, ['name', 'type'])
   let url = connection.url
