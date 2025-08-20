@@ -1,6 +1,6 @@
 import nano from 'nano'
-import collCreate from '../method/coll/create.js'
-import collExists from '../method/coll/exists.js'
+import modelCreate from '../method/model/create.js'
+import modelExists from '../method/model/exists.js'
 
 async function instantiate ({ connection, schemas, noRebuild }) {
   const { pick } = this.lib._
@@ -16,10 +16,10 @@ async function instantiate ({ connection, schemas, noRebuild }) {
   this.instances.push(instance)
   if (noRebuild) return
   for (const schema of schemas) {
-    const exists = await collExists.call(this, schema)
+    const exists = await modelExists.call(this, schema)
     if (exists) continue
     try {
-      await collCreate.call(this, schema)
+      await modelCreate.call(this, schema)
     } catch (err) {
       this.log.error('errorOn%s%s', connection.name, err.message)
     }
