@@ -3,7 +3,7 @@ import modelCreate from '../method/model/create.js'
 import modelExists from '../method/model/exists.js'
 
 async function instantiate ({ connection, schemas, noRebuild }) {
-  const { pick } = this.lib._
+  const { pick } = this.app.lib._
   this.instances = this.instances ?? []
   const instance = pick(connection, ['name', 'type'])
   let url = connection.url

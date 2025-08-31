@@ -1,5 +1,5 @@
 async function recordFind ({ schema, filter = {}, options = {} } = {}) {
-  const { forOwn, set, map, omit } = this.lib._
+  const { forOwn, set, map, omit } = this.app.lib._
   const { getInfo } = this.app.dobo
   const { instance } = getInfo(schema)
   const { prepPagination } = this.app.dobo

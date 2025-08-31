@@ -1,5 +1,5 @@
 async function connSanitizer (conn) {
-  const { cloneDeep } = this.lib._
+  const { cloneDeep } = this.app.lib._
   if (!conn.url) {
     conn.proto = conn.proto ?? 'http'
     conn.host = conn.host ?? 'localhost'

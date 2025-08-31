@@ -3,7 +3,7 @@ import getRecord from './get.js'
 async function recordUpdate ({ schema, id, body, options } = {}) {
   const { noResult } = options
   const { getInfo } = this.app.dobo
-  const { merge, omit } = this.lib._
+  const { merge, omit } = this.app.lib._
   const { instance } = getInfo(schema)
 
   const old = noResult ? undefined : await getRecord.call(this, { schema, id, options: { thrownNotFound: true } })
