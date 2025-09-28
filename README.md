@@ -1,22 +1,25 @@
 # dobo-couchdb
 
-Plugin name: **doboCouchdb**, alias: **dbcouch**
-
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ardhi/dobo-couchdb) ![NPM Version](https://img.shields.io/npm/v/dobo-couchdb)
 
-> <br />**Attention**: I do NOT accept any pull request at the moment, thanks!<br /><br />
+> <br />**Attention**: I do NOT accept any pull requests at the moment, thanks! ([Why?](https://github.com/ardhi/bajo/blob/main/tutorial/00-welcome.md#contribution))<br /><br />
 
 CouchDB driver for [Dobo](https://github.com/ardhi/dobo)
 
 ## Installation
 
-Goto your ```<bajo-base-dir>``` and type:
+First, go to your ```{app-dir}``` and run the following command in your terminal:
 
 ```bash
-$ npm install dobo-couchdb
+$ npm install dobo dobo-couchdb
 ```
 
-Now open your ```<bajo-data-dir>/config/.plugins``` and put ```dobo-couchdb``` in it
+Next, open the file located at ```{data-dir}/config/.plugins``` and add ```dobo``` and ```dobo-couchdb```
+
+## Documentations
+
+- [Config Object](tutorial/00-config.md)
+- [API](https://ardhi.github.io/dobo-couchdb)
 
 ## License
 
