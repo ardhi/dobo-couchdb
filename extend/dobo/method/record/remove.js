@@ -5,7 +5,7 @@ async function recordRemove ({ schema, id, options = {} } = {}) {
   const { noResult } = options
   const { instance } = getInfo(schema)
 
-  const rec = noResult ? undefined : await getRecord.call(this, { schema, id, options: { thrownNotFound: true } })
+  const rec = noResult ? undefined : await getRecord.call(this, { schema, id, options: { silent: true } })
   const model = instance.client.use(schema.name)
   const resp = await model.destroy(id, rec._rev)
   if (noResult) return

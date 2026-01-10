@@ -2,7 +2,7 @@ async function modelExists ({ schema, options }) {
   const { getInfo } = this.app.dobo
   const { instance } = getInfo(schema)
   try {
-    await instance.client.db.get(schema.name)
+    await instance.client.info()
   } catch (err) {
     if (err.statusCode === 404) return false
   }

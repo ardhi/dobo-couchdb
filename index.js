@@ -12,13 +12,21 @@ async function factory (pkgName) {
    *
    * @class
    */
-  class DoboCouchdb extends this.app.pluginClass.base {
-    static alias = 'dbcouch'
-    static dependencies = ['dobo']
-
+  class DoboCouchdb extends this.app.baseClass.Base {
     constructor () {
       super(pkgName, me.app)
       this.config = {}
+      this.drivers = [{
+        name: 'couchdb',
+        idField: {
+          name: '_id'
+        }
+      }, {
+        name: 'pouchdb',
+        idField: {
+          name: '_id'
+        }
+      }]
     }
   }
 
